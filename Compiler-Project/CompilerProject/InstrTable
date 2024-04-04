@@ -1,0 +1,37 @@
+package compiler_project;
+
+public class InstrTable {
+    private int address;
+    private String ops;
+    private String operand;
+
+    public InstrTable(int _address, String _ops, String _operand){
+        this.address = _address;
+        this.ops = _ops;
+        this.operand = _operand;
+    }
+
+    public int GetAddress(){
+        return address;
+    }
+
+    public String getOps(){
+        return ops;
+    }
+
+    public String getOperand(){
+        return operand;
+    }
+
+    public void setAddress(int _address){
+        this.address = _address;
+    }
+
+    public void setOps(String _ops){
+        this.ops = _ops;
+    }
+
+    public void setOperand(String _operand){
+        this.operand = _operand;
+    }
+}
