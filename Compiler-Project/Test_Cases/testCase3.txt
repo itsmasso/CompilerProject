@@ -1,0 +1,14 @@
+[* this is comment for this sample code which
+converts  Fahrenheit into Celcius *]
+
+
+#
+     int   low,  high, step;      [* declarations *]
+#
+     get (low, high, step);
+     while (low  <=  high )  
+         {  
+	     put (low);
+             low =  low  +  step;
+         } 
+     endwhile

@@ -1,0 +1,62 @@
+------------------------------------
+Assembly Code
+------------------------------------
+Address    Op       Oprnd 
+0          IN            
+1          POPM     5000 
+2          IN            
+3          POPM     5001 
+4          IN            
+5          POPM     5002 
+6          LABEL         
+7          PUSHM    5000 
+8          PUSHM    5002 
+9          LEQ           
+10         JMPZ       18 
+11         PUSHM    5000 
+12         OUT           
+13         PUSHM    5000 
+14         PUSHM    5001 
+15         ADD           
+16         POPM     5000 
+17         JMP         6 
+18         IN            
+19         POPM     5003 
+20         IN            
+21         POPM     5004 
+22         IN            
+23         POPM     5005 
+24         LABEL         
+25         PUSHM    5003 
+26         PUSHM    5005 
+27         LEQ           
+28         JMPZ       36 
+29         PUSHM    5003 
+30         OUT           
+31         PUSHM    5003 
+32         PUSHM    5004 
+33         ADD           
+34         POPM     5003 
+35         JMP        24 
+36         PUSHM    5000 
+37         PUSHM    5003 
+38         GRT           
+39         JMPZ       42 
+40         PUSHM    5003 
+41         POPM     5006 
+42         PUSHM    5000 
+43         POPM     5006 
+44         PUSHM    5006 
+45         OUT           
+------------------------------------
+Symbol Table
+------------------------------------
+| Identifier | MemoryLocation | Type |
+| x          | 5000           |  int |
+| y          | 5001           |  int |
+| z          | 5002           |  int |
+| a          | 5003           |  int |
+| b          | 5004           |  int |
+| c          | 5005           |  int |
+| bigger     | 5006           |  int |
+------------------------------------

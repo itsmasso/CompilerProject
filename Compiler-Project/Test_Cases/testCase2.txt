@@ -1,0 +1,30 @@
+[* this is comment for this sample code which
+converts  Fahrenheit into Celcius twice, and compares each other *]
+
+
+#
+     int   x,  y, z, a, b, c, bigger;      [* declarations *]
+#
+     get (x, y, z);
+     while (x  <=  z )  
+         {  
+	     put (x);
+             x =  x  +  y;
+         } 
+     endwhile
+     get (a, b, c);
+     while (a  <=  c)  
+         {  
+	     put (a);
+             a =  a  +  b;
+         } 
+     endwhile
+     if(x > a)
+	bigger = a;
+     else
+	bigger = x;
+     fi
+     put (bigger);
+	
+	
+     

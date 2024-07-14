@@ -1,0 +1,30 @@
+------------------------------------
+Assembly Code
+------------------------------------
+Address    Op       Oprnd 
+0          IN            
+1          POPM     5000 
+2          IN            
+3          POPM     5001 
+4          IN            
+5          POPM     5002 
+6          LABEL         
+7          PUSHM    5000 
+8          PUSHM    5001 
+9          LEQ           
+10         JMPZ       18 
+11         PUSHM    5000 
+12         OUT           
+13         PUSHM    5000 
+14         PUSHM    5002 
+15         ADD           
+16         POPM     5000 
+17         JMP         6 
+------------------------------------
+Symbol Table
+------------------------------------
+| Identifier | MemoryLocation | Type |
+| low        | 5000           |  int |
+| high       | 5001           |  int |
+| step       | 5002           |  int |
+------------------------------------

@@ -1,0 +1,36 @@
+------------------------------------
+Assembly Code
+------------------------------------
+Address    Op       Oprnd 
+0          PUSHI       0 
+1          POPM     5002 
+2          PUSHI       1 
+3          POPM     5000 
+4          IN            
+5          POPM     5001 
+6          LABEL         
+7          PUSHM    5000 
+8          PUSHM    5001 
+9          LES           
+10         JMPZ       20 
+11         PUSHM    5002 
+12         PUSHI       1 
+13         ADD           
+14         POPM     5002 
+15         PUSHM    5000 
+16         PUSHI       1 
+17         ADD           
+18         POPM     5000 
+19         JMP         6 
+20         PUSHM    5002 
+21         PUSHM    5001 
+22         ADD           
+23         OUT           
+------------------------------------
+Symbol Table
+------------------------------------
+| Identifier | MemoryLocation | Type |
+| i          | 5000           |  int |
+| max        | 5001           |  int |
+| sum        | 5002           |  int |
+------------------------------------
